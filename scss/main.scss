@@ -1,0 +1,368 @@
+@import "./utils/libs";
+@import "./utils/mixin";
+@import "./utils/vars";
+
+@include font-face("PTRootUI-Regular", "../fonts/PT_ROOT_UI/PT Root UI_Regular");
+
+:root {
+    @include font-size(16px, 20px, 320px, 1200px);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $primaryColor;
+    height: 100%;
+}
+
+body {
+    color: $mainFontColor;
+    display: flex;
+    flex-direction: column;
+    font-family: $mainFont;
+    font-weight: $mainFontWeight;
+    line-height: $mainLineHeight;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+
+    // сглаживание шрифтов в MacOS
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &.no-scrolling {
+        overflow: hidden;
+    }
+}
+
+@include font-face("BrutalType-Bold", "../fonts/BRUTAL_TYPE/BrutalType-Bold");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: $neutralPrimaryLighter;
+    font-family: "BrutalType-Bold";
+    font-weight: normal;
+    line-height: normal;
+}
+
+h1,
+.h1 {
+    @include font-size(28px, 42px, 320px, 1200px);
+}
+
+h2,
+.h2 {
+    @include font-size(24px, 30px, 320px, 1200px);
+}
+
+h3,
+.h3 {
+    @include font-size(20px, 24px, 320px, 1200px);
+}
+
+h4,
+.h4 {
+    @include font-size(18px, 20px, 320px, 1200px);
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+    font-size: 18px;
+}
+
+a {
+    border-bottom: 1px solid;
+    border-color: $borderLink;
+    color: $mainFontColor;
+    text-decoration: none;
+    transition: border-color .25s ease-in-out;
+
+    &:hover {
+        border-color: transparent;
+        transition: border-color .25s ease-in-out;
+    }
+}
+
+ol {
+    @media only screen and (max-width: $desktopWidth) {
+        padding-inline-start: 17px;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0 0 0 17px;
+        position: relative;
+
+        &::before {
+            content: "−";
+            color: inherit;
+            display: inline-block;
+            left: 0;
+            position: absolute;
+            top: 1px;
+        }
+    }
+}
+
+hr {
+    background-color: $borderLighter;
+    border: none;
+    height: 2px;
+    margin: 30px 0;
+    width: 100%;
+}
+
+@include font-face("PTRootUI-Bold", "../fonts/PT_ROOT_UI/PT Root UI_Bold");
+
+.button-wrapper {
+    .button {
+        background-color: transparent;
+        border-radius: 0;
+        border: 2px solid $defaultColor;
+        color: $defaultColor;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "PTRootUI-Bold";
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        opacity: 1;
+        outline: none;
+        padding: 20px 30px;
+        text-transform: uppercase;
+        transition: opacity .25s ease-in-out, color .25s ease-in-out, border-color .35s ease-in-out, background-color .35s ease-in-out;
+        -webkit-appearance: none;
+
+        &:disabled,
+        &.disabled {
+            cursor: default;
+            opacity: .5;
+            transition: opacity .25s ease-in-out;
+        }
+
+        &.fill-background {
+            background: $yellow;
+            border-color: $yellow;
+            color: $primaryColor;
+            transition: color .25s ease-in-out, border-color .35s ease-in-out, background-color .35s ease-in-out;
+        }
+
+        &:hover {
+            background-color: $yellow;
+            border-color: $yellow;
+            color: $primaryColor;
+            transition: color .25s ease-in-out, border-color .35s ease-in-out, background-color .35s ease-in-out;
+        }
+    }
+}
+
+.full-link {
+    background: none;
+    border: none;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.jumbotron {
+    padding-bottom: 100px;
+    padding-top: 100px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .section-heading {
+            line-height: 1.2;
+            margin: 0;
+            width: 44%;
+        }
+
+        .text {
+            margin: 0;
+            width: 52%;
+        }
+    }
+}
+
+@include placeholder {
+    color: #fff;
+    font-family: "PTRootUI-Bold";
+    font-size: 16px;
+}
+
+section,
+.section {
+    // padding-bottom: 100px;
+    // padding-top: 100px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    position: relative;
+
+    .section-heading {
+        @include font-size(28px, 40px, 320px, 1200px);
+        color: $defaultColor;
+        font-family: "BrutalType-Bold";
+        letter-spacing: -0.01em;
+        line-height: 1;
+        margin-top: 0;
+
+        &.no-margin {
+            margin: 0;
+        }
+    }
+
+    .section-description {
+        @include font-size(18px, 24px, 320px, 1200px);
+    }
+
+    &.page-not-found {
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    &--gray {
+        background-color: $mainBackgroundColor;
+    }
+
+    @media only screen and (max-width: $tableWidth) {
+        // padding-bottom: 70px;
+        // padding-top: 70px;
+        margin-bottom: 70px;
+        margin-top: 70px;
+    }
+
+    @media only screen and (max-width: $smTableWidth) {
+        // padding-bottom: 60px;
+        // padding-top: 60px;
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+
+    @media only screen and (max-width: $phoneWidth) {
+        // padding-bottom: 45px;
+        // padding-top: 45px;
+        margin-bottom: 45px;
+        margin-top: 45px;
+    }
+}
+
+.sub-heading {
+    color: $neutralRegular;
+    display: block;
+    font-family: "PTRootUI-Bold";
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 15px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+
+    &::after {
+        background-color: $neutralRegular;
+        content: "";
+        display: block;
+        height: 2px;
+        margin-top: 8px;
+        position: relative;
+        width: 25px;
+    }
+}
+
+.swiper-container {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $desktopWidth;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.content-wrapper {
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.custom-scrollbar {
+    .scroll-bar {
+        background-color: $lightBackgrounColor;
+        width: 2px;
+
+        .thumb {
+            background-color: $defaultColor;
+            width: 2px;
+        }
+    }
+}
+
+.grabbable {
+    cursor: -webkit-grabbing !important;
+    cursor:    -moz-grabbing !important;
+    cursor:         grabbing !important;
+}
+
+.scrollbar--hidden {
+    -ms-overflow-style: none; // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+
+    &::-webkit-scrollbar {
+        display: none; // Safari and Chrome
+    }
+}
+
+.swiper-pagination-progressbar {
+    bottom: 0;
+    top: initial !important;
+
+    &-fill {
+        background-color: $defaultColor !important;
+    }
+}
+
+@include font-face("BrutalType-Light", "../fonts/BRUTAL_TYPE/BrutalType-Light");
+
+@import "./utils/media";
+
+@include font-face("BrutalType-ExtraLight", "../fonts/BRUTAL_TYPE/BrutalType-ExtraLight");

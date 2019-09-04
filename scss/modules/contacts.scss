@@ -1,0 +1,133 @@
+@import "../utils/vars";
+@import "../utils/mixin.scss";
+
+.contacts {
+    // Внутренний отступ на странице "Контакты"
+    &:not(.front-page) {
+        // padding-top: 250px;
+        padding-top: 100px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // Контакты
+    .contacts-data {
+        max-width: 458px;
+
+        .section-heading {
+            @include font-size(28px, 60px, 320px, 1490px);
+            margin-bottom: 120px;
+        }
+
+        &__item {
+            border: none;
+            color: $neutralPrimaryLighter;
+            display: inline-block;
+            margin-bottom: 10px;
+
+            &.telephone {
+                @include font-size(20px, 24px, 320px, 1200px);
+                font-family: "PTRootUI-Bold";
+                line-height: 1.2;
+            }
+
+            &.email {
+                @include font-size(16px, 18px, 320px, 1200px);
+                line-height: 1.2;
+            }
+
+            &.address {
+                font-size: 16px;
+                line-height: 1.2;
+            }
+        }
+
+        .social-network {
+            display: flex;
+            margin-top: 50px;
+
+            &__item {
+                @include font-size(12px, 14px, 320px, 1200px);
+                background-color: transparent;
+                border: none;
+                color: $defaultColor;
+                display: block;
+                margin-right: 16px;
+                font-family: "BrutalType-Bold";
+                line-height: 1;
+                text-transform: uppercase;
+                transition: color .25s ease-in-out;
+
+                &:hover {
+                    transition: color .25s ease-in-out;
+
+                    &.inst {
+                        color: $instColor;
+                    }
+
+                    &.vk {
+                        color: $vkColor;
+                    }
+
+                    &.fb {
+                        color: $fbColor;
+                    }
+
+                    &.tw {
+                        color: $twColor;
+                    }
+                }
+            }
+        }
+    }
+
+    // Форма обратной связи
+    .form-wrapper {
+        margin-left: auto;
+        margin-top: 30px;
+        max-width: 600px;
+    }
+
+    // Главная страница
+    &.front-page {
+        padding-bottom: 0;
+        padding-top: 0;
+
+        .container {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding-top: 97px;
+    
+            .contacts-data,
+            .form-wrapper {
+                flex: none;
+            }
+    
+            .contacts-data {
+                height: 100%;
+                width: 460px;
+            }
+    
+            .form-wrapper {
+                height: 100%;
+                width: 600px;
+
+                .field:not(.field-file) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &.grabbable {
+                cursor: default !important;
+            }
+    
+            & > * {
+                user-select: none;
+            }
+        }
+    }
+}

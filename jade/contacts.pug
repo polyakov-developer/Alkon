@@ -1,0 +1,79 @@
+extends ./layout.pug
+
+block title
+    title Контакты - Digital агентство «Алькон»
+
+block prepend css
+    link(rel="stylesheet", href="../css/form.css")
+    link(rel="stylesheet", href="../css/contacts.css")
+
+block content
+    main.content-wrapper
+        section.contacts
+            .container
+                .contacts-data
+                    p.section-heading Воплотим вашу идею в жизнь
+                    
+                    a.contacts-data__item.telephone(href="tel:8(351)233-68-03") 8 (351) 233-68-03 
+                    br
+                    a.contacts-data__item.email(href="mailto:info@alkon.pro") info@alkon.pro
+                    br
+                    span.contacts-data__item.address Россия, Челябинск, Ленина 21В, оф. 602
+                    
+                    .social-network
+                        a.social-network__item.inst(href="https://www.instagram.com", rel="nofollow", target="_blank") instagram
+                        a.social-network__item.vk(href="https://vk.com", rel="nofollow", target="_blank") vk.com
+                        a.social-network__item.fb(href="https://www.facebook.com", rel="nofollow", target="_blank") facebook
+                        a.social-network__item.tw(href="https://twitter.com", rel="nofollow", target="_blank") twitter
+
+                .form-wrapper
+                    form#form-feedback.form.form-feedback(name="form-feedback", action="/", method="POST")
+                        .field
+                            span.field-caption Имя
+                            input#field-feedback__name.field-value.required(type="text", name="f_ContactName", autocomplete="off")
+                            label(for="field-feedback__name")
+                                i.highlight
+                            span.field-msg
+
+                        .field
+                            span.field-caption Телефон
+                            input#field-feedback__telephone.field-value.required(type="tel", name="f_Telephone", autocomplete="off")
+                            label(for="field-feedback__telephone")
+                                i.highlight
+                            span.field-msg
+
+                        .field
+                            span.field-caption E-mail
+                            input#field-feedback__email.field-value.required(type="email", name="f_Email", autocomplete="off")
+                            label(for="field-feedback__email")
+                                i.highlight
+                            span.field-msg
+
+                        .field.field-comment
+                            span.field-caption Сообщение
+                            textarea#field-feedback__textarea.field-value(type="text", name="f_Comment")
+                            label(for="field-feedback__textarea")
+                                i.highlight
+                            span.field-msg
+
+                        .form-footer
+                            .field.field-file
+                                span.field-caption Прикрепить файл
+                                
+                                .field-value
+                                    input#field-feedback__file(type="file", name="f_File")
+                                    label(for="field-feedback__file")
+                                        svg#file-add.file-add(viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M12 5V19', stroke='white', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                            path(d='M5 12H19', stroke='white', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                    #file-info.file-info.hidden
+                                        span#file-name.name
+                                        span#file-remove.btn-remove
+
+                                span.field-msg
+
+                            .button-wrapper
+                                input.button(type="submit", value="Отправить")
+
+                        .terms-and-conditions
+                            span Нажимая кнопку «Отправить», вы автоматически даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.

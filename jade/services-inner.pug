@@ -1,0 +1,204 @@
+extends ./layout.pug
+
+block title 
+    title Продвижение сайтов - Digital агентство «Алькон»
+
+block prepend css
+    link(href="../css/services.css", rel="stylesheet")
+    link(href="../libs/jQuery-Scrollbar/jquery.custom-scrollbar.min.css", rel="stylesheet")
+
+block content
+    main.content-wrapper
+        section.services--inner.no-margin
+            .hero-slide(style="background-image: url(../images/compress/services/seo/hero-slide@progressive.jpg)")
+                .container
+                    span.category Seo
+                    h1.section-heading Продвижение сайтов
+                    p.section-description 
+                        | Оптимизируем сайт для лучшего ранжирования в поисковых системах.
+                        br 
+                        | Обеспечим лидирующие позиции в Яндекс и Google. Увеличим посещаемость.
+                    .button-wrapper
+                        a.button(href="") Заказать услугу
+                
+                .control-buttons
+                    a.button.button-return(href="../html/services.html")
+                    a.button.button-down
+
+            .content
+                section.container.list-of-works
+                    p.section-heading.no-margin Обязательный объем работ по сайту
+                    .list-of-works__items-wrapper
+                        .row
+                            .list-of-works__item
+                                span.sub-heading.number 01
+                                p.title Анализ и определение популярности тематики бизнеса в Интернете
+                            
+                            .list-of-works__item
+                                span.sub-heading.number 02
+                                p.title Внешняя оптимизация и продвижение сайта
+
+                            .list-of-works__item
+                                span.sub-heading.number 03
+                                p.title Анализ входящего трафика на сайт
+
+                            .list-of-works__item
+                                span.sub-heading.number 04
+                                p.title Внутренняя оптимизация и продвижение сайта
+
+                            .list-of-works__item
+                                span.sub-heading.number 05
+                                p.title Мониторинг продвигаемых позиций
+                            
+                            .list-of-works__item
+                                span.sub-heading.number 06
+                                p.title Ежемесячная отчетность перед заказчиком
+
+                section.section--gray.jumbotron
+                    .container
+                        p.section-heading Результаты сотрудничества с нами
+                        p.text Увеличение количества посетителей сайта, рост количества звонков и заявок, увеличение продаж. Повышение позиций в SERP, Яндекc, Google. В то же время снижение стоимости одного посетителя, снижение затрат на привлечение клиентов.
+
+                section.container.cases
+                    p.section-heading.no-margin(style="text-align: center;") Кейсы по продвижению
+                    p(style="color: #DADADA; text-align: center;") Лучшие гарантии качества — это эффективность реализуемых нами проектов.
+
+                    .cases-wrapper
+                        .case__item
+                            .background(style="background-image: url(../images/compress/cases/case-iris@progressive.jpg)")
+                            a.popup-youtube(href="http://www.youtube.com/watch?v=0_Wz80GmkLQ")
+                            span.title Ирис
+                    
+                        .case__item
+                            .background(style="background-image: url(../images/compress/cases/case-rialtorg@progressive.jpg)")
+                            a.popup-youtube(href="http://www.youtube.com/watch?v=0_Wz80GmkLQ")
+                            span.title Риалторг
+                    
+                        .case__item
+                            .background(style="background-image: url(../images/compress/cases/case-spektr@progressive.jpg)")
+                            a.popup-youtube(href="http://www.youtube.com/watch?v=0_Wz80GmkLQ")
+                            span.title Спектр
+
+                section.section--gray.tariff
+                    .container
+                        p.section-heading Тарифы
+
+                        .tariff-wrapper
+                            .tariff__item
+                                span.sub-heading.category SEO Поддержка
+                                span.title Базовое продвижение
+                                .price 
+                                    span.caption От
+                                    span.value 18 000
+                                    span.currency &#8381;
+                            
+                            .tariff__item
+                                span.sub-heading.category SEO Standart
+                                span.title Продвижение по позициям
+                                .price 
+                                    span.caption От
+                                    span.value 20 000
+                                    span.currency &#8381;
+
+                            .tariff__item
+                                span.sub-heading.category SEO Result
+                                span.title Продвижение с оплатой за результат
+                                .price 
+                                    span.caption От
+                                    span.value 200 000
+                                    span.currency &#8381;
+
+                            .tariff__item
+                                span.sub-heading.category SEO Комплекс
+                                span.title Продвижение для интернет-магазинов
+                                .price 
+                                    span.caption От
+                                    span.value 300 990
+                                    span.currency &#8381;
+
+                            .tariff__item
+                                span.sub-heading.category SEO Optimization
+                                span.title Продвижение по неограниченной семантике
+                                .price 
+                                    span.caption От
+                                    span.value 500 000
+                                    span.currency &#8381;
+
+                            .tariff__item
+                                span.sub-heading.category SEO Result
+                                span.title Продвижение в рамках комплексной стратегии онлайн-маркетинга
+                                .price 
+                                    span.caption От
+                                    span.value 1 000 000
+                                    span.currency &#8381;
+
+                        .call-back-block
+                            p.text Нужны индивидуальные условия? 
+                                br
+                                | Звоните. Обсудим.
+
+                            a.telephone(href="tel:+73512336803") 8 (351) 233-68-03
+        
+                section.container.seo-text
+                    .seo-text-wrapper
+                        .col-left
+                            p.sub-heading Перестаньте платить за процесс
+                            p.section-heading Получите гарантированный результат!
+                            .button-wrapper
+                                a.button(href="/html/contacts.html") Заказать консультацию
+
+                        .col-right
+                            .text.custom-scrollbar
+                                h2 Продвижение в комплексе или интернет-маркетинг
+                                p Цены на разработку и продвижение сайтов
+                                p Тот, кто не видит очевидности влияния интернета на массы — слеп, глух и нем. Каждый третий житель планеты — активный пользователь всемирной сети, ищущий для себя товары, услуги и информацию. Рано или поздно каждый бизнесмен понимает необходимость в обзаведении собственным уголком в интернете, а именно — в создании веб-сайта.
+                                p 
+                                    strong Комплекс интернет-маркетинга состоит из следующих направлений:
+                                ol
+                                    li Составление стратегии и плана продвижения;
+                                    li Анализ и улучшение конверсии сайта;
+                                    li Комплексный запуск.
+                                    li Аналитика трафика;
+                                    li Изучение и корректирование поведенческих факторов;
+                                    li При необходимости – доработка юзабилити сайта.
+                                p 
+                                    b Комплексный запуск интернет рекламы подразумевает под собой:
+                                ul
+                                    li инструментов SEO;
+                                    li SMM-продвижения;
+                                    li контекстной рекламы (Pay Per Click — «плати за клик»);
+                                    li рекламы в поисковиках;
+                                    li баннерной рекламы и прочее;
+                                p Но только создать интернет-ресурс недостаточно, ещё его нужно популяризовать, привлечь к нему аудиторию. Для этого необходимо продвижение веб-сайта. Разработка и раскрутка — два неотъемлемых слагаемых для достижения вашей главной цели: начать зарабатывать с помощью интернета.
+                                p Заказать создание, продвижение и раскрутку сайта в России, цены которых прозрачны и открыты, вы можете в агентстве Alkon. Наша веб-студия завершила уже более 520 проектов, работая на рынке IT-услуг с 2000 года. Мы занимаемся наполнением и продвижением разработанных нами ресурсов и тех, которые выполнены другими разработчиками в Челябинске и остальных городах Росии.
+
+                    .services-navigation
+                        a.services-navigation__item(href="") Web
+                        a.services-navigation__item(href="") PPC
+                        a.services-navigation__item(href="") SMM
+                        a.services-navigation__item(href="") SERM
+                        a.services-navigation__item(href="") Branding
+                        a.services-navigation__item(href="") Motion
+                        a.services-navigation__item(href="") CM
+                        a.services-navigation__item(href="") Support
+                        a.services-navigation__item(href="") Domains
+                        a.services-navigation__item(href="") Hosting
+
+        script(src="../libs/jQuery-Scrollbar/jquery.custom-scrollbar.min.js")
+        script.
+            let heroSlideHeight = document.querySelector(".hero-slide").offsetHeight;
+
+            $(".button-down").on("click", function(){
+                window.scroll({
+                    top: heroSlideHeight,
+                    left: 0,
+                    behavior: 'smooth',
+                });
+            });
+
+            $(".custom-scrollbar").customScrollbar({
+                hScroll: false,
+                updateOnWindowResize: true,
+                wheelSpeed: 30,
+                preventDefaultScroll: true
+            });

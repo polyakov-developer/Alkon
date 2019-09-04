@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description">
+    <meta name="keywords">
+    <meta name="author" conten="OOO «Alkon» | Vadim Polyakov">
+    <link rel="stylesheet" href="../favicon.ico" type="image/x-icon">
+    <title>Контакты - Digital агентство «Алькон»</title>
+    <style>
+      #fader {background-color: #020202;bottom: 0;height: 100%;left: 0;position: fixed;right: 0;top: 0;width: 100%;z-index: 9001;}
+      
+    </style>
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/contacts.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/main.css?v=1.0">
+  </head>
+  <body>
+    <div id="fader"></div>
+    <script src="../libs/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="../libs/scroll-lock/scroll-lock.min.js"></script>
+    <header class="header" id="header"><a class="logo" href="../html"><img src="../images/logo.svg" alt="Logo Alkon"></a><a class="burger" id="burger"><span class="burger-line"><i class="burger-line--inner"></i><i class="burger-line--inner"></i></span><span class="burger-line"><i class="burger-line--inner"></i><i class="burger-line--inner"></i></span><span class="burger-line"><i class="burger-line--inner"></i><i class="burger-line--inner"></i></span></a>
+      <nav class="navigation">
+        <ul class="top-level">
+          <li><a href="/html/">Главная</a></li>
+          <li><a href="/html/portfolio.html">Портфолио</a></li>
+          <li><a href="/html/contacts.html">Контакты</a></li>
+        </ul>
+        <ul class="bottom-level">
+          <li><a href="/html/services.html">Услуги</a></li>
+          <li><a href="/html/team.html">Команда</a></li>
+          <li><a href="/html/blog.html">Блог</a></li>
+          <li> <a href="/html/job-in-alkon.html">Работа в Alkon</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content-wrapper">
+      <section class="contacts">
+        <div class="container">
+          <div class="contacts-data">
+            <p class="section-heading">Воплотим вашу идею в жизнь</p><a class="contacts-data__item telephone" href="tel:8(351)233-68-03">8 (351) 233-68-03 </a><br><a class="contacts-data__item email" href="mailto:info@alkon.pro">info@alkon.pro</a><br><span class="contacts-data__item address">Россия, Челябинск, Ленина 21В, оф. 602</span>
+            <div class="social-network"><a class="social-network__item inst" href="https://www.instagram.com" rel="nofollow" target="_blank">instagram</a><a class="social-network__item vk" href="https://vk.com" rel="nofollow" target="_blank">vk.com</a><a class="social-network__item fb" href="https://www.facebook.com" rel="nofollow" target="_blank">facebook</a><a class="social-network__item tw" href="https://twitter.com" rel="nofollow" target="_blank">twitter</a></div>
+          </div>
+          <div class="form-wrapper">
+            <form class="form form-feedback" id="form-feedback" name="form-feedback" action="/" method="POST">
+              <div class="field"><span class="field-caption">Имя</span>
+                <input class="field-value required" id="field-feedback__name" type="text" name="f_ContactName" autocomplete="off">
+                <label for="field-feedback__name"><i class="highlight"></i></label><span class="field-msg"></span>
+              </div>
+              <div class="field"><span class="field-caption">Телефон</span>
+                <input class="field-value required" id="field-feedback__telephone" type="tel" name="f_Telephone" autocomplete="off">
+                <label for="field-feedback__telephone"><i class="highlight"></i></label><span class="field-msg"></span>
+              </div>
+              <div class="field"><span class="field-caption">E-mail</span>
+                <input class="field-value required" id="field-feedback__email" type="email" name="f_Email" autocomplete="off">
+                <label for="field-feedback__email"><i class="highlight"></i></label><span class="field-msg"></span>
+              </div>
+              <div class="field field-comment"><span class="field-caption">Сообщение</span>
+                <textarea class="field-value" id="field-feedback__textarea" type="text" name="f_Comment"></textarea>
+                <label for="field-feedback__textarea"><i class="highlight"></i></label><span class="field-msg"></span>
+              </div>
+              <div class="form-footer">
+                <div class="field field-file"><span class="field-caption">Прикрепить файл</span>
+                  <div class="field-value">
+                    <input id="field-feedback__file" type="file" name="f_File">
+                    <label for="field-feedback__file">
+                      <svg class="file-add" id="file-add" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M5 12H19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </label>
+                    <div class="file-info hidden" id="file-info"><span class="name" id="file-name"></span><span class="btn-remove" id="file-remove"></span></div>
+                  </div><span class="field-msg"></span>
+                </div>
+                <div class="button-wrapper">
+                  <input class="button" type="submit" value="Отправить">
+                </div>
+              </div>
+              <div class="terms-and-conditions"><span>Нажимая кнопку «Отправить», вы автоматически даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.</span></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <link rel="stylesheet" href="../libs/noty/css/noty.min.css">
+    <link rel="stylesheet" href="../libs/noty/css/themes/metroui.min.css">
+    <link rel="stylesheet" href="../libs/magnific-popup/css/magnific-popup.min.css">
+    <script src="../libs/current-device.min.js"></script>
+    <script src="../libs/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+    <script src="../libs/input-mask/inputmask.js"></script>
+    <script src="../libs/input-mask/inputmask.extensions.js"></script>
+    <script src="../libs/input-mask/inputmask.numeric.extensions.js"></script>
+    <script src="../libs/input-mask/inputmask.date.extensions.js"></script>
+    <script src="../libs/noty/js/noty.min.js"></script>
+    <script src="../scripts/validateForm.js"></script>
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

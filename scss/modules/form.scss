@@ -1,0 +1,162 @@
+@import "../utils/vars.scss";
+
+.form {
+    .field {
+        margin-bottom: 30px;
+        width: 62%;
+
+        &-caption {
+            color: $neutralRegular;
+            display: block;
+            font-family: "PTRootUI-Bold";
+            font-size: 13px;
+            letter-spacing: 0.03em;
+            line-height: 1;
+            margin-bottom: 9px;
+            pointer-events: none;
+            user-select: none;
+            text-transform: uppercase;
+        }
+
+        &-value {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            color: $defaultColor;
+            display: block;
+            font-family: "PTRootUI-Bold";
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 12px;
+            outline: none;
+            width: 100%;
+            
+            -webkit-appearance: none;
+            
+            &:focus + label .highlight {
+                transition: background-color .45s, width .45s;
+                width: 100%;
+            }
+
+            &.invalid + label .highlight {
+                background-color: $dangerColor;
+                transition: background-color .45s, width .45s;
+                width: 100%;
+            }
+        }
+
+        &-comment {
+            width: 100%;
+
+            textarea.field-value {
+                height: 77px;
+                resize: none;
+            }
+        }
+
+        label {
+            border-bottom: 1px solid $borderLighter;
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+
+            .highlight {
+                background-color: $defaultColor;
+                bottom: -1px;
+                display: block;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                transition: background-color .45s, width .45s;
+                width: 0;
+            }
+        }
+
+        &-file {
+            margin-bottom: 0;
+            position: relative;
+
+            input[type="file"] {
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+
+                &.not-empty + label {
+                    display: none;
+                }
+            }
+
+            .field-value {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 0;
+
+                label {
+                    align-items: center;
+                    border: 1px solid $borderBase;
+                    cursor: pointer;
+                    display: flex;
+                    height: 40px;
+                    justify-content: center;
+                    margin: 0;
+                    width: 40px;
+    
+                    svg {
+                        width: 24px;
+                    }
+                }
+
+                .file-info {
+                    align-items: center;
+                    border: 1px solid $borderBase;
+                    display: flex;
+                    height: 40px;
+                    justify-content: center;
+                    padding: 0 15px;
+                    width: auto;
+
+                    .name {
+                        color: $defaultColor;
+                        font-size: 16px;
+                        margin-right: 8px;
+                        max-width: 150px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+
+                    .btn-remove {
+                        background-image: url(../images/icons/clear.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        cursor: pointer;
+                        height: 11px;
+                        width: 11px;
+                    }
+                }
+            }
+        }
+
+        &-msg {
+
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .terms-and-conditions {
+        color: $neutralDarker;
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 36px;
+    }
+}

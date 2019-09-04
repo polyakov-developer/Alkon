@@ -1,0 +1,66 @@
+extends ./layout.pug
+
+block title
+    title Блог - Digital агентство «Алькон»
+
+block prepend css
+    link(rel="stylesheet", href="../libs/swiper/css/swiper.min.css")
+    link(rel="stylesheet", href="../css/blog.css")
+
+block content
+    main.content-wrapper
+        section.blog.no-margin
+            .blog-header
+                .container
+                    h1.section-heading Блог
+                    p.section-description В наши услуги входят не только разработка, дизайн и продвижение. Мы решаем маркетинговые и бизнес-задачи: финансовые и нефинансовые. Вы покупаете не просто человеко-часы, вы покупаете наш опыт, экcпертизу и навык создания лучших сайтов в нише.
+
+            .blog-content
+                .blog__item
+                    .blog__item-content.container
+                        p.heading.h1 Copyrighting
+                        p.anons Как отличить плохой текст от хорошего: 6 признаков
+                        .button-wrapper.more
+                            a.button(href="./blog-inner.html") Подробнее
+
+                .blog__item
+                    .blog__item-content.container
+                        p.heading.h1 PPC
+                        p.anons Контекстная реклама на мобильных устройствах
+                        .button-wrapper.more
+                            a.button(href="./blog-inner.html") Подробнее
+
+                .blog__item
+                    .blog__item-content.container
+                        p.heading.h1 SEO
+                        p.anons SEO или правило 2Д (дорого, долго)
+                        .button-wrapper.more
+                            a.button(href="./blog-inner.html") Подробнее
+
+                .blog__item
+                    .blog__item-content.container
+                        p.heading.h1 SMM
+                        p.anons Как построить бизнес: соцсети в помощь!
+                        .button-wrapper.more
+                            a.button(href="./blog-inner.html") Подробнее
+
+                .blog__item
+                    .blog__item-content.container
+                        p.heading.h1 Design
+                        p.anons Тренды в дизайне
+                        .button-wrapper.more
+                            a.button(href="./blog-inner.html") Подробнее
+
+                .blog__item
+                    .blog__item-content.container
+                        p.heading.h1 SMM
+                        p.anons 10 вдохновляющих примеров из социальных сетей для вашего B2C контент-маркетинга
+                        .button-wrapper.more
+                            a.button(href="./blog-inner.html") Подробнее
+
+                .blog__item
+                    .blog__item-content.container
+                        p.heading.h1 Content Marketing
+                        p.anons Как делать вирусный контент
+                        .button-wrapper.more
+                            a.button(href="./blog-inner.html") Подробнее

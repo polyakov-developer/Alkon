@@ -1,0 +1,222 @@
+extends ./layout.pug
+
+block title
+    title Digital агентство «Алькон»
+
+block prepend css
+    link(href="../libs/swiper/css/swiper.min.css", rel="stylesheet")
+    link(href="../css/portfolio.css", rel="stylesheet")
+    link(href="../css/form.css", rel="stylesheet")
+    link(href="../css/contacts.css", rel="stylesheet")
+    link(href="../css/front-page.css", rel="stylesheet")
+
+block content
+    main.content-wrapper
+        div.slide-container
+            section.fullscreen
+            
+            section.section.portfolio.front-page
+                .swiper-container
+                    .swiper-wrapper
+                        //- Слайд - Союзпищепром
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/z-menu.svg", alt="Логотип «Здоровое меню»")
+                                    span.company-name Союзпищепром
+                                    span.type-work Web
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/z-menu@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=0_Wz80GmkLQ")
+                        
+                        //- Слайд - Косов
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/kosov.svg", alt="Логотип «Косов»")
+                                    span.company-name Косов
+                                    span.type-work Branding/Web
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/kosov@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=8xpReUZQ6GI")
+                        
+                        //- Слайд - Солнечная долина
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/dolina.svg", alt="Логотип «Солнечная долина»")
+                                    span.company-name Солнечная долина
+                                    span.type-work PPC
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/dolina@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                        //- Слайд - Чебаркульская птица
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/che-bird.svg", alt="Логотип «Чебаркульская птица»")
+                                    span.company-name Чебаркульская птица
+                                    span.type-work PPC
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/che-bird@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                        //- ----------------------
+
+                        //- Слайд - Союзпищепром
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/z-menu.svg", alt="Логотип «Здоровое меню»")
+                                    span.company-name Союзпищепром
+                                    span.type-work Web
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/z-menu@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=0_Wz80GmkLQ")
+                        
+                        //- Слайд - Косов
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/kosov.svg", alt="Логотип «Косов»")
+                                    span.company-name Косов
+                                    span.type-work Branding/Web
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/kosov@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=8xpReUZQ6GI")
+                        
+                        //- Слайд - Солнечная долина
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/dolina.svg", alt="Логотип «Солнечная долина»")
+                                    span.company-name Солнечная долина
+                                    span.type-work PPC
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/dolina@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                        //- Слайд - Чебаркульская птица
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/che-bird.svg", alt="Логотип «Чебаркульская птица»")
+                                    span.company-name Чебаркульская птица
+                                    span.type-work PPC
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/che-bird@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+            
+            section.section.contacts.front-page(style="padding: 50px 0px;")
+                .container
+                    .contacts-data
+                        p.section-heading Воплотим вашу идею в жизнь
+                        
+                        a.contacts-data__item.telephone(href="tel:8(351)233-68-03") 8 (351) 233-68-03 
+                        br
+                        a.contacts-data__item.email(href="mailto:info@alkon.pro") info@alkon.pro
+                        br
+                        span.contacts-data__item.address Россия, Челябинск, Ленина 21В, оф. 602
+                        
+                        .social-network
+                            a.social-network__item.inst(href="https://www.instagram.com", rel="nofollow", target="_blank") instagram
+                            a.social-network__item.vk(href="https://vk.com", rel="nofollow", target="_blank") vk.com
+                            a.social-network__item.fb(href="https://www.facebook.com", rel="nofollow", target="_blank") facebook
+                            a.social-network__item.tw(href="https://twitter.com", rel="nofollow", target="_blank") twitter
+
+                    .form-wrapper
+                        form#form-feedback.form.form-feedback(name="form-feedback", action="/", method="POST")
+                            .field
+                                span.field-caption Имя
+                                input#field-feedback__name.field-value.required(name="f_ContactName", type="text", autocomplete="off")
+                                label(for="field-feedback__name")
+                                    i.highlight
+                                span.field-msg
+
+                            .field
+                                span.field-caption Телефон
+                                input#field-feedback__telephone.field-value.required(name="f_Telephone", type="tel", autocomplete="off")
+                                label(for="field-feedback__telephone")
+                                    i.highlight
+                                span.field-msg
+
+                            .field
+                                span.field-caption E-mail
+                                input#field-feedback__email.field-value.required(name="f_Email", type="email", autocomplete="off")
+                                label(for="field-feedback__email")
+                                    i.highlight
+                                span.field-msg
+
+                            .field.field-comment
+                                span.field-caption Сообщение
+                                textarea#field-feedback__textarea.field-value(name="f_Comment", type="text")
+                                label(for="field-feedback__textarea")
+                                    i.highlight
+                                span.field-msg
+
+                            .form-footer
+                                .field.field-file
+                                    span.field-caption Прикрепить файл
+                                    input#field-feedback__files(name="f_Property_File01", type="file", onchange="uploadFile(this.files[0])", multiple)
+                                    
+                                    .field-value
+                                        .upload-file
+                                            span.name file_tz.zip
+                                            span.remove
+
+                                        .upload-file
+                                            span.name logo.doc
+                                            span.remove
+
+                                        label(for="field-feedback__files")
+                                            svg(viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M12 5V19', stroke='white', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                                path(d='M5 12H19', stroke='white', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                    span.field-msg
+
+                                    script.
+                                        function uploadFile(elems) {
+                                            console.log(elems);
+                                        }
+
+                                        $(".upload-file .remove").on("click", function() {
+                                            $(this).parent().remove();
+                                        });
+
+                                        $(".field").on("click", function() {
+                                            $("input.field-value, textarea.field-value", this).focus();
+                                        });
+
+                                .button-wrapper
+                                    input.button(type="submit", value="Отправить")
+
+                            .terms-and-conditions
+                                span Нажимая кнопку «Отправить», вы автоматически даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.
+            
+block append scripts
+    link(href="../libs/swiper/css/swiper.min.css", rel="stylesheet")
+    script(src="../libs/swiper/js/swiper.min.js")
+    script(src="../libs/TweenLite.min.js")
+
+    style.
+        section {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .fullscreen {
+            background-color: #5353536b;
+        }
+
+    script.
+        $(function(){
+        });

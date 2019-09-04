@@ -1,0 +1,130 @@
+@import "../utils/vars.scss";
+
+.team {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &__item {
+        height: 100vh;
+        position: relative;
+
+        .layer {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            &-front {
+                align-items: center;
+                background-color: $primaryColor;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                opacity: 1;
+                pointer-events: none;
+                transition: opacity .25s ease-in-out;
+                z-index: 2;
+
+                .background {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                }
+            }
+
+            &-back {
+                background-color: $primaryColor;
+                padding-left: 24%;
+                padding-right: 24%;
+                position: relative;
+                z-index: -1;
+
+                .wrapper {
+                    position: relative;
+                    top: 23%;
+
+                    .custom-scrollbar {
+                        height: 450px;
+                        overflow: auto;
+                        padding-right: 20px;
+                    }
+
+                    .name,
+                    .appointment,
+                    .text {
+                        display: block;
+                        margin: 0;
+                    }
+
+                    .name {
+                        color: $defaultColor;
+                        text-transform: uppercase;
+                    }
+
+                    .appointment {
+                        color: $neutralDarker;
+                        font-size: 13px;
+                        margin-top: 15px;
+                    }
+
+                    .text {
+                        font-size: 16px;
+                    }
+
+                    .social-network {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        &__item {
+                            border: none;
+                            color: $defaultColor;
+                            font-size: 16px;
+                            margin-right: 10px;
+
+                            &.email {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.active {
+            .layer {
+                &-front {
+                    opacity: 0.1;
+                    transition: opacity .25s ease-in-out;
+                }
+
+                &-back {
+                    z-index: 1;
+                }
+            }
+        }
+
+        @media (hover) {
+            &:hover {
+                .layer {
+                    &-front {
+                        opacity: 0.1;
+                        transition: opacity .25s ease-in-out;
+                    }
+    
+                    &-back {
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}

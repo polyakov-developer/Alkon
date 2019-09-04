@@ -1,0 +1,140 @@
+/*@function rem($pixels, $context: $mainFontSize) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1rem;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}*/
+.fullscreen-bg {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  overflow: hidden; }
+  .fullscreen-bg__media {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+  .fullscreen-bg .media-content {
+    background-color: rgba(0, 0, 0, .55);
+    bottom: 85px;
+    left: 50px;
+    opacity: 1;
+    padding: 40px;
+    position: absolute;
+    right: 50px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: opacity .25s ease-in-out, -webkit-transform .5s ease-in-out;
+    transition: opacity .25s ease-in-out, -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, opacity .25s ease-in-out;
+    transition: transform .5s ease-in-out, opacity .25s ease-in-out, -webkit-transform .5s ease-in-out;
+    width: calc(100% - 100px);
+    z-index: 1; }
+    .fullscreen-bg .media-content__heading {
+      font-family: "BrutalType-Bold";
+      line-height: normal;
+      margin: 0;
+      text-transform: uppercase; }
+      .fullscreen-bg .media-content__heading {
+        font-size: 22px; }
+      @media (min-width: 320px) and (max-width: 1200px) {
+        .fullscreen-bg .media-content__heading {
+          font-size: calc(4.54545px + 5.45455vw); } }
+      @media (min-width: 1200px) {
+        .fullscreen-bg .media-content__heading {
+          font-size: 70px; } }
+    .fullscreen-bg .media-content__description {
+      color: #FFFFFF;
+      font-family: "BrutalType-Light";
+      font-size: 30px;
+      line-height: normal;
+      letter-spacing: -0.01em;
+      margin: 10px 0 0 0;
+      opacity: 0.7; }
+    .fullscreen-bg .media-content .media-controlls {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      right: 40px;
+      top: 40px; }
+    .fullscreen-bg .media-content .media-controlls .controll-btn {
+      cursor: pointer;
+      height: 42px;
+      width: 42px; }
+      .fullscreen-bg .media-content .media-controlls .controll-btn:first-of-type {
+        margin-right: 15px; }
+    .fullscreen-bg .media-content .animation-play {
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%; }
+    .fullscreen-bg .media-content--hidden {
+      opacity: 0;
+      -webkit-transform: translateY(100vh);
+      transform: translateY(100vh);
+      -webkit-transition: opacity .25s ease-in-out, -webkit-transform .5s ease-in-out;
+      transition: opacity .25s ease-in-out, -webkit-transform .5s ease-in-out;
+      transition: transform .5s ease-in-out, opacity .25s ease-in-out;
+      transition: transform .5s ease-in-out, opacity .25s ease-in-out, -webkit-transform .5s ease-in-out; }
+
+#stopwatch {
+  background: #000000;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9999; }
+
+.location-guide {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+  .location-guide .top {
+    cursor: row-resize;
+    height: 35%;
+    border: 1px solid red; }
+  .location-guide .middle {
+    cursor: col-resize;
+    height: 30%;
+    border: 1px solid green; }
+  .location-guide .bottom {
+    cursor: row-resize;
+    height: 35%;
+    border: 1px solid yellow; }
+  .location-guide .coordinates {
+    background-color: hotpink;
+    padding: 10px 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 60px;
+    z-index: 15; }
+    .location-guide .coordinates span {
+      color: #fff; }

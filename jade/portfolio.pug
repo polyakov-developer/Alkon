@@ -1,0 +1,170 @@
+extends ./layout.pug
+
+block variables
+    - var bodyAttr = {class: "no-scrolling"};
+
+block title
+    title Портфолио - Digital агентство «Алькон»
+
+block prepend css
+    link(rel="stylesheet", href="../libs/swiper/css/swiper.min.css")
+    link(rel="stylesheet", href="../css/portfolio.css")
+
+block content
+    main.content-wrapper
+        .portfolio
+            .swiper-container
+                .swiper-wrapper
+                    //- Слайд - Союзпищепром
+                    .swiper-slide
+                        .portfolio__item
+                            .layer.layer-front
+                                img.company-logo(src="../images/compress/portfolio/logos/z-menu.svg", alt="Логотип «Здоровое меню»")
+                                span.company-name Союзпищепром
+                                span.type-work Web
+
+                            .layer.layer-back
+                                .background(style="background-image: url(../images/compress/portfolio/compress-progressive/z-menu@progressive.jpg)")
+                                a.popup-youtube(href="http://www.youtube.com/watch?v=0_Wz80GmkLQ")
+                    
+                    //- Слайд - Косов
+                    .swiper-slide
+                        .portfolio__item
+                            .layer.layer-front
+                                img.company-logo(src="../images/compress/portfolio/logos/kosov.svg", alt="Логотип «Косов»")
+                                span.company-name Косов
+                                span.type-work Branding/Web
+
+                            .layer.layer-back
+                                .background(style="background-image: url(../images/compress/portfolio/compress-progressive/kosov@progressive.jpg)")
+                                a.popup-youtube(href="http://www.youtube.com/watch?v=8xpReUZQ6GI")
+                    
+                    //- Слайд - Солнечная долина
+                    .swiper-slide
+                        .portfolio__item
+                            .layer.layer-front
+                                img.company-logo(src="../images/compress/portfolio/logos/dolina.svg", alt="Логотип «Солнечная долина»")
+                                span.company-name Солнечная долина
+                                span.type-work PPC
+
+                            .layer.layer-back
+                                .background(style="background-image: url(../images/compress/portfolio/compress-progressive/dolina@progressive.jpg)")
+                                a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                    //- Слайд - Чебаркульская птица
+                    .swiper-slide
+                        .portfolio__item
+                            .layer.layer-front
+                                img.company-logo(src="../images/compress/portfolio/logos/che-bird.svg", alt="Логотип «Чебаркульская птица»")
+                                span.company-name Чебаркульская птица
+                                span.type-work PPC
+
+                            .layer.layer-back
+                                .background(style="background-image: url(../images/compress/portfolio/compress-progressive/che-bird@progressive.jpg)")
+                                a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                    //- ----------------------
+
+                    //- Слайд - Союзпищепром
+                    .swiper-slide
+                        .portfolio__item
+                            .layer.layer-front
+                                img.company-logo(src="../images/compress/portfolio/logos/z-menu.svg", alt="Логотип «Здоровое меню»")
+                                span.company-name Союзпищепром
+                                span.type-work Web
+
+                            .layer.layer-back
+                                .background(style="background-image: url(../images/compress/portfolio/compress-progressive/z-menu@progressive.jpg)")
+                                a.popup-youtube(href="http://www.youtube.com/watch?v=0_Wz80GmkLQ")
+                    
+                    //- Слайд - Косов
+                    .swiper-slide
+                        .portfolio__item
+                            .layer.layer-front
+                                img.company-logo(src="../images/compress/portfolio/logos/kosov.svg", alt="Логотип «Косов»")
+                                span.company-name Косов
+                                span.type-work Branding/Web
+
+                            .layer.layer-back
+                                .background(style="background-image: url(../images/compress/portfolio/compress-progressive/kosov@progressive.jpg)")
+                                a.popup-youtube(href="http://www.youtube.com/watch?v=8xpReUZQ6GI")
+                    
+                    //- Слайд - Солнечная долина
+                    .swiper-slide
+                        .portfolio__item
+                            .layer.layer-front
+                                img.company-logo(src="../images/compress/portfolio/logos/dolina.svg", alt="Логотип «Солнечная долина»")
+                                span.company-name Солнечная долина
+                                span.type-work PPC
+
+                            .layer.layer-back
+                                .background(style="background-image: url(../images/compress/portfolio/compress-progressive/dolina@progressive.jpg)")
+                                a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                    //- Слайд - Чебаркульская птица
+                    .swiper-slide
+                        .portfolio__item
+                            .layer.layer-front
+                                img.company-logo(src="../images/compress/portfolio/logos/che-bird.svg", alt="Логотип «Чебаркульская птица»")
+                                span.company-name Чебаркульская птица
+                                span.type-work PPC
+
+                            .layer.layer-back
+                                .background(style="background-image: url(../images/compress/portfolio/compress-progressive/che-bird@progressive.jpg)")
+                                a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                .swiper-pagination
+
+
+block append scripts
+    script(src="../libs/fullpage/scrolloverflow.min.js")
+    script(src="../libs/swiper/js/swiper.min.js")
+    script.
+        var swiper = new Swiper('.swiper-container', {
+            resistanceRatio: 0,
+            slidesPerView: 4,
+            spaceBetween: 0,
+            speed: 700,
+            loop: false,
+            freeMode: true,
+            mousewheel: {
+                invert: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+                dynamicBullets: false
+            },
+            breakpoints: {
+                680: {
+                    freeModeSticky: true,
+                    slidesPerView: 1,
+                },
+                1023: {
+                    slidesPerView: 2,
+                },
+                1366: {
+                    slidesPerView: 3,
+                }
+            },
+            on: {
+                slideChange: function() {
+                    swiper.slides[swiper.previousIndex].classList.remove("active");
+                }
+            }
+        });
+
+        //- Отключить скролл на всей странице
+        scrollLock.disablePageScroll();
+
+        if (device.desktop() == false) {
+            for (let i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].onclick = function() {
+                    if (swiper.slides[i].classList.contains("active")) {
+                        swiper.slides[i].classList.remove("active");
+                    } else {
+                        swiper.slides[i].classList.add("active");
+                    }
+                };
+            }
+        }

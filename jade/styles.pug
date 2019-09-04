@@ -1,0 +1,109 @@
+extends ./layout.pug
+
+block title
+    title Стили - Digital агентство «Алькон»
+
+block content
+    main.content-wrapper
+        section.container
+            h1 Заголовок первого уровня
+            h2 Заголовок второго уровня
+            h3 Заголовок третьего уровня
+            h4 Заголовок четвертого уровня
+            h5 Заголовок пятого уровня
+            h6 Заголовок шестого уровня
+
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus numquam inventore quaerat praesentium labore ut cum voluptates nulla vero, fugit, ullam illo at impedit. Quidem minima harum totam nostrum accusantium.Doloremque mollitia ipsam numquam, cupiditate assumenda maxime dolorum nemo deleniti consequuntur recusandae eos sapiente voluptas placeat magni, perspiciatis, earum perferendis dolore repellat praesentium! Obcaecati temporibus amet iure tempore ex inventore?Ut corrupti aperiam eius ex, nesciunt enim quo earum iusto placeat ipsum repellat autem praesentium sunt saepe sint maiores molestias aliquam quibusdam iure quas aut minima! Sed accusamus assumenda numquam.Expedita dolores dicta minima quis eos quo quod soluta commodi ab, nihil quibusdam eligendi earum enim rerum eum quidem dolorem dolor itaque culpa ullam beatae fugit! Nesciunt iusto reiciendis itaque.Dignissimos ipsa cupiditate magni voluptate perspiciatis sapiente explicabo quisquam? Doloribus, repellat totam. Quidem, obcaecati. Quaerat quod unde error, velit reprehenderit voluptatem temporibus! Et laboriosam vel eos aliquid quisquam, exercitationem vero.
+
+            a Ссылка
+
+            p Маркированный список
+            ul
+                li элемент списка
+                li элемент списка
+                li элемент списка
+                li элемент списка
+                li элемент списка
+
+            p Нумерованный список
+            ol
+                li элемент списка
+                li элемент списка
+                li элемент списка
+                li элемент списка
+                li элемент списка
+
+            .button-wrapper
+                button.button Кнопка
+
+            p.h2 Форма обратной связи
+
+            link(rel="stylesheet", href="../css/form.css")
+            .form-wrapper
+                form#form-feedback.form.form-feedback(name="form-feedback", action="/", method="POST")
+                    .field
+                        span.field-caption Имя
+                        input#field-feedback__name.field-value.required(type="text", name="f_ContactName", autocomplete="off")
+                        label(for="field-feedback__name")
+                            i.highlight
+                        span.field-msg
+
+                    .field
+                        span.field-caption Телефон
+                        input#field-feedback__telephone.field-value.required(type="tel", name="f_Telephone", autocomplete="off")
+                        label(for="field-feedback__telephone")
+                            i.highlight
+                        span.field-msg
+
+                    .field
+                        span.field-caption E-mail
+                        input#field-feedback__email.field-value.required(type="email", name="f_Email", autocomplete="off")
+                        label(for="field-feedback__email")
+                            i.highlight
+                        span.field-msg
+
+                    .field.field-comment
+                        span.field-caption Сообщение
+                        textarea#field-feedback__textarea.field-value(type="text", name="f_Comment")
+                        label(for="field-feedback__textarea")
+                            i.highlight
+                        span.field-msg
+
+                    .form-footer
+                        .field.field-file
+                            span.field-caption Прикрепить файл
+                            input#field-feedback__files(type="file", name="f_Property_File01", onchange="uploadFile(this.files[0])", multiple)
+                            //- input#field-feedback__files.field-value(type="file", name="f_Property_File02", onchange="uploadFile(this.files[0])", multiple)
+                            .field-value
+                                .upload-file
+                                    span.name file_tz.zip
+                                    span.remove
+
+                                .upload-file
+                                    span.name logo.doc
+                                    span.remove
+
+                                label(for="field-feedback__files")
+                                    svg(viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M12 5V19', stroke='white', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                        path(d='M5 12H19', stroke='white', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                            span.field-msg
+
+                            script.
+                                function uploadFile(elems) {
+                                    console.log(elems);
+                                }
+
+                                $(".upload-file .remove").on("click", function() {
+                                    $(this).parent().remove();
+                                });
+
+                                $(".field").on("click", function() {
+                                    $("input.field-value, textarea.field-value", this).focus();
+                                });
+
+                        .button-wrapper
+                            input.button(type="submit", value="Отправить")
+
+                    .terms-and-conditions
+                        span Нажимая кнопку «Отправить», вы автоматически даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.

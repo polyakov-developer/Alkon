@@ -1,0 +1,272 @@
+@import "../utils/vars.scss";
+@import "../utils/mixin.scss";
+
+.job-in-company {
+    .hero-slide {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+    
+        .container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+        }
+    
+        .category {
+            color: $neutralRegular;
+            font-size: 14px;
+            font-family: "PTRootUI-Bold";
+            margin: 0;
+            letter-spacing: 0.03em;
+            line-height: 15px;
+            text-transform: uppercase;
+        }
+    
+        .section-heading {
+            @include font-size(28px, 60px, 320px, 1200px);
+            line-height: normal;
+            margin: 25px 0 0 0;
+            text-align: center;
+        }
+    
+        .section-description {
+            color: $neutralPrimaryLighter;
+            margin: 30px 0 0 0;
+            text-align: center;
+        }
+    
+        .button-wrapper {
+            margin: 80px 0 0 0;
+
+            .button {
+                margin: 0 60px;
+            }
+        }
+    
+        &::before {
+            background-color: rgba($color: $primaryColor, $alpha: 0.8);
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    .vacancy {
+        .vacancy-wrapper {
+            margin-top: 50px;
+
+            .vacancy__item {
+                background-color: transparent;
+                cursor: pointer;
+                transition: background-color .25s ease-in-out;
+
+                &-content {
+                    border-bottom: 2px solid $borderDarker;
+                    position: relative;
+                    transition: border-color .25s ease-in-out;
+
+                    .title {
+                        font-family: "BrutalType-Light";
+                        @include font-size(22px, 42px, 320px, 1200px);
+                        letter-spacing: 0.03em;
+                        line-height: 1;
+                        margin: auto 0;
+                        padding-bottom: 50px;
+                        padding-top: 50px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        transition: color .25s ease-in-out;
+                        user-select: none;
+                        width: 100%;
+                    }
+
+                    .description {
+                        align-items: baseline;
+                        display: flex;
+
+                        .col {
+                            margin-right: 15px;
+                            margin-bottom: 50px;
+                            width: 33.3333%;
+
+                            &-heading {
+                                font-family: "PTRootUI-Bold";
+                                font-size: 20px;
+                                margin-bottom: 25px;
+                                margin-top: 0;
+                                user-select: none;
+                            }
+
+                            .text {
+                                font-size: 20px;
+                                user-select: none;
+                            }
+
+                            &:last-of-type,
+                            &:nth-of-type(3) {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+
+                &--is--open {
+                    background-color: $lightBackgrounColor;
+        
+                    .vacancy__item-content {
+                        border-color: transparent;
+                        transition: border-color .25s ease-in-out;
+                    }
+                }
+    
+                @media not all and (hover: none) {
+                    &:hover {
+                        background-color: $lightBackgrounColor;
+        
+                        .vacancy__item-content {
+                            border-color: transparent;
+                            transition: border-color .25s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .story,
+    .team-life {
+        .layer {
+            cursor: pointer;
+            position: relative;
+
+            &-front {
+                background-color: rgba($color: #000000, $alpha: 0.8);
+                bottom: 0;
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                padding: 30px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transition: opacity .25s ease-in-out;
+                width: 100%;
+                z-index: 1;
+
+                &:hover {
+                    opacity: 1;
+                    transition: opacity .25s ease-in-out;
+                }
+            }
+
+            .name {
+                @include font-size(18px, 24px, 320px, 1200px);
+                color: $defaultColor;
+                font-family: "BrutalType-Bold";
+                text-align: center;
+                user-select: none;
+                width: 100%;
+            }
+
+            .text {
+                color: $defaultColor;
+                @include font-size(16px, 22px, 640px, 1200px);
+                margin-top: 60px;
+            }
+
+            &-back {
+                .background {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    bottom: 0;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .story {
+        .swiper-container {
+            margin-top: 60px;
+        }
+        
+        .layer {
+            height: 600px;
+        }
+
+        .navigation-wrapper {
+            bottom: 0;
+            height: 600px;
+            left: 0;
+            margin: auto -100px 0 auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: calc(100% + 200px);
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                cursor: pointer;
+                height: 260px;
+                margin: 0;
+                outline: none;
+                transform: translateY(-50%);
+                transition: opacity .25s ease-in-out;
+                width: 42px;
+
+                &:hover {
+                    opacity: 1;
+                    transition: opacity .25s ease-in-out;
+                }
+            }
+
+            .swiper-button-prev {
+                background-image: url(../images/icons/prev-slide.svg);
+                opacity: 0.5;
+                left: 0;
+            }
+
+            .swiper-button-next {
+                background-image: url(../images/icons/next-slide.svg);
+                opacity: 0.5;
+                right: 0;
+            }
+        }
+
+        .swiper-pagination {
+            margin-top: 30px;
+            position: relative;
+
+            .swiper-pagination-bullet {
+                border-radius: 0;
+                background-color: $defaultColor;
+                height: 12px;
+                position: relative;
+                width: 12px;
+            }
+        }
+    }
+
+    .team-life {
+        .layer {
+            height: 720px;
+        }
+    }
+}

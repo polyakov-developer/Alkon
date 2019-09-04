@@ -1,0 +1,217 @@
+extends ./layout.pug
+
+block title
+    title Digital агентство «Алькон»
+
+block prepend css
+    link(href="../libs/swiper/css/swiper.min.css", rel="stylesheet")
+    link(href="../css/portfolio.css", rel="stylesheet")
+    link(href="../css/form.css", rel="stylesheet")
+    link(href="../css/contacts.css", rel="stylesheet")
+    link(href="../css/front-page.css", rel="stylesheet")
+
+block content
+    main.content-wrapper
+        //- .location-guide
+            .top
+            .middle
+            .bottom
+            .coordinates 
+                span
+        
+        div#fullpage
+            section.section.media.no-padding.no-margin
+                #media-wrapper.media-wrapper.fullscreen-bg
+                    #media-content.media-content
+                        #media-controlls.media-controlls
+
+                        h1.media-content__heading
+                            | Упаковываем и продвигаем 
+                            br
+                            | компании в интернете
+                        
+                        p.media-content__description
+                            | Посмотрите наши работы, изучите услуги и начните свой проект
+
+            section.section.portfolio.front-page.no-padding.no-margin
+                .swiper-container
+                    .swiper-wrapper
+                        //- Слайд - Союзпищепром
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/z-menu.svg", alt="Логотип «Здоровое меню»")
+                                    span.company-name Союзпищепром
+                                    span.type-work Web
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/z-menu@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=0_Wz80GmkLQ")
+                        
+                        //- Слайд - Косов
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/kosov.svg", alt="Логотип «Косов»")
+                                    span.company-name Косов
+                                    span.type-work Branding/Web
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/kosov@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=8xpReUZQ6GI")
+                        
+                        //- Слайд - Солнечная долина
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/dolina.svg", alt="Логотип «Солнечная долина»")
+                                    span.company-name Солнечная долина
+                                    span.type-work PPC
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/dolina@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                        //- Слайд - Чебаркульская птица
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/che-bird.svg", alt="Логотип «Чебаркульская птица»")
+                                    span.company-name Чебаркульская птица
+                                    span.type-work PPC
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/che-bird@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                        //- ----------------------
+
+                        //- Слайд - Союзпищепром
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/z-menu.svg", alt="Логотип «Здоровое меню»")
+                                    span.company-name Союзпищепром
+                                    span.type-work Web
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/z-menu@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=0_Wz80GmkLQ")
+                        
+                        //- Слайд - Косов
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/kosov.svg", alt="Логотип «Косов»")
+                                    span.company-name Косов
+                                    span.type-work Branding/Web
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/kosov@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=8xpReUZQ6GI")
+                        
+                        //- Слайд - Солнечная долина
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/dolina.svg", alt="Логотип «Солнечная долина»")
+                                    span.company-name Солнечная долина
+                                    span.type-work PPC
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/dolina@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+                        //- Слайд - Чебаркульская птица
+                        .swiper-slide
+                            .portfolio__item
+                                .layer.layer-front
+                                    img.company-logo(src="../images/compress/portfolio/logos/che-bird.svg", alt="Логотип «Чебаркульская птица»")
+                                    span.company-name Чебаркульская птица
+                                    span.type-work PPC
+
+                                .layer.layer-back
+                                    .background(style="background-image: url(../images/compress/portfolio/compress-progressive/che-bird@progressive.jpg)")
+                                    a.popup-youtube(href="http://www.youtube.com/watch?v=BWiez5gxLA0")
+
+            section.section.contacts.front-page.no-padding.no-margin
+                #contacts-wrapper.container.scrollbar--hidden
+                    .contacts-data
+                        p.section-heading Воплотим вашу идею в жизнь
+                        
+                        a.contacts-data__item.telephone(href="tel:8(351)233-68-03") 8 (351) 233-68-03 
+                        br
+                        a.contacts-data__item.email(href="mailto:info@alkon.pro") info@alkon.pro
+                        br
+                        span.contacts-data__item.address Россия, Челябинск, Ленина 21В, оф. 602
+                        
+                        .social-network
+                            a.social-network__item.inst(href="https://www.instagram.com", rel="nofollow", target="_blank") instagram
+                            a.social-network__item.vk(href="https://vk.com", rel="nofollow", target="_blank") vk.com
+                            a.social-network__item.fb(href="https://www.facebook.com", rel="nofollow", target="_blank") facebook
+                            a.social-network__item.tw(href="https://twitter.com", rel="nofollow", target="_blank") twitter
+
+                    .form-wrapper
+                        form#form-feedback.form.form-feedback(name="form-feedback", action="/", method="POST")
+                            .col.col-left
+                                .field
+                                    span.field-caption Имя
+                                    input#field-feedback__name.field-value.required(name="f_ContactName", type="text", autocomplete="off")
+                                    label(for="field-feedback__name")
+                                        i.highlight
+                                    span.field-msg
+
+                                .field
+                                    span.field-caption Телефон
+                                    input#field-feedback__telephone.field-value.required(name="f_Telephone", type="tel", autocomplete="off")
+                                    label(for="field-feedback__telephone")
+                                        i.highlight
+                                    span.field-msg
+
+                                .field
+                                    span.field-caption E-mail
+                                    input#field-feedback__email.field-value.required(name="f_Email", type="email", autocomplete="off")
+                                    label(for="field-feedback__email")
+                                        i.highlight
+                                    span.field-msg
+
+                            .col.col-right
+                                .field.field-comment
+                                    span.field-caption Сообщение
+                                    textarea#field-feedback__textarea.field-value(name="f_Comment", type="text")
+                                    label(for="field-feedback__textarea")
+                                        i.highlight
+                                    span.field-msg
+
+                            .form-footer
+                                .field.field-file
+                                    span.field-caption Прикрепить файл
+                                    
+                                    .field-value
+                                        input#field-feedback__file(type="file", name="f_File")
+                                        label(for="field-feedback__file")
+                                            svg#file-add.file-add(viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M12 5V19', stroke='white', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                                path(d='M5 12H19', stroke='white', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                        #file-info.file-info.hidden
+                                            span#file-name.name
+                                            span#file-remove.btn-remove
+
+                                    span.field-msg
+
+                                .button-wrapper
+                                    input.button(type="submit", value="Отправить")
+
+                            .terms-and-conditions
+                                span Нажимая кнопку «Отправить», вы автоматически даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.
+
+
+block append scripts
+    link(href="../libs/fullpage/fullpage.min.css", rel="stylesheet")
+    script(src="../libs/fullpage/scrolloverflow.min.js")
+    script(src="../libs/fullpage/fullpage.min.js")
+    script(src="../libs/swiper/js/swiper.min.js")
+    script(src="../libs/progressbarJS/progressbar.min.js")
+    script(src="../libs/lottie/lottie.js")
+    script(src="../libs/TweenMax.min.js")
+    script(src="../scripts/front-page.js")

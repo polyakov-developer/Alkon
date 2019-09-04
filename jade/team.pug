@@ -1,0 +1,212 @@
+extends ./layout.pug
+
+block variables
+    - var bodyAttr = {class: "no-scrolling"};
+
+block title
+    title Команда - Digital агентство «Алькон»
+
+block prepend css
+    link(href="../libs/jQuery-Scrollbar/jquery.custom-scrollbar.min.css", rel="stylesheet")
+    link(rel="stylesheet", href="../libs/swiper/css/swiper.min.css")
+    link(rel="stylesheet", href="../css/team.css")
+
+block content
+    main.content-wrapper
+        .team
+            .swiper-container
+                .swiper-wrapper
+                    //- Зайков Сергей
+                    .swiper-slide.team__item
+                        .layer.layer-front
+                            .background(style="background-image: url(../images/compress/team/compress-progressive/zaykov@progressive.jpg)")
+
+                        .layer.layer-back
+                            .wrapper
+                                .custom-scrollbar
+                                    span.name.h3 Сергей Зайков
+                                    span.appointment Директор
+                                    
+                                    .text
+                                        p «Alkon» растет и развивается начиная с 2008 года.
+                                        p Наше мастерство подтверждают многочисленные региональные и всероссийские награды в сфере интернет-маркетинга. Но главная награда для меня как для директора – наша сильная и инициативная команда. С профессионалами «Алькона» интересно работать в условиях кризиса, решая нестандартные задачи, постоянно совершенствуя рабочие процессы.
+                                    
+                                        .social-network
+                                            a.social-network__item.email(href="mailto:dand@it-alkon.ru") dand@it-alkon.ru
+                        
+                    //- Новиков Артем
+                    .swiper-slide.team__item
+                        .layer.layer-front
+                            .background(style="background-image: url(../images/compress/team/compress-progressive/novikov@progressive.jpg)") 
+
+                        .layer.layer-back
+                            .wrapper
+                                .custom-scrollbar
+                                    span.name.h3 Артем Новиков
+                                    span.appointment Руководитель отдела интернет-маркетинга
+                                    
+                                    .text
+                                        p «Сделать всё по красоте»? Запросто! Так, чтобы было удобно юзерам? Обязательно! Повысить продажи за счет «продающего красного»? С этим ко мне. Двигать пиксели и растрировать — мои главные задачи в «Альконе».
+                                        p Если серьезно, то круг моих обязанностей не ограничивается только тем, чтобы «сделать всё красиво». Представить информацию в доступном виде средствами дизайна — вот первостепенная задача, которую я решаю каждый раз, когда сажусь за работу.
+                                        p Поддерживать рабочий настрой и постоянно развивать свои навыки мне помогает дружественная атмосфера в коллективе, объединенном одними целями. Я рад тому, что однажды пришел в «Алькон» и надеюсь на долгую и красивую историю.
+                                        
+                                        .social-network
+                                            a.social-network__item.email(href="mailto:seo@it-alkon.ru") seo@it-alkon.ru
+                                            a.social-network__item(href="https://www.instagram.com/artem_novikov74/", rel="nofollow", target="_blank") instagram
+                                            a.social-network__item(href="https://vk.com/id7758026", rel="nofollow", target="_blank") vk.com
+
+                    //- Тазетдинов Тимур
+                    .swiper-slide.team__item
+                        .layer.layer-front
+                            .background(style="background-image: url(../images/compress/team/compress-progressive/tazetdinov@progressive.jpg)")
+
+                        .layer.layer-back
+                            .wrapper
+                                .custom-scrollbar
+                                    span.name.h3 Тимур Тазетдинов
+                                    span.appointment Амбассадор, в г. Санкт-Петербурге
+                                    
+                                    .text
+                                        p Технологии развиваются так быстро, что обычному человеку за ними очень сложно уследить. Быть вашим проводником в это удивительное будущее — вот в чем состоит моя миссия. Показать, как использовать сегодняшние инструменты для привлечения клиентов в свой бизнес. Не бояться, а приручать технологии себе на пользу.
+                                    
+                                        .social-network
+                                            a.social-network__item.email(href="mailto:tazetdinov@it-alkon.ru") tazetdinov@it-alkon.ru
+
+                    //- Зайков Сергей
+                    .swiper-slide.team__item
+                        .layer.layer-front
+                            .background(style="background-image: url(../images/compress/team/compress-progressive/zaykov@progressive.jpg)")
+
+                        .layer.layer-back
+                            .wrapper
+                                .custom-scrollbar
+                                    span.name.h3 Сергей Зайков
+                                    span.appointment Директор
+                                    
+                                    .text
+                                        p «Alkon» растет и развивается начиная с 2008 года.
+                                        p Наше мастерство подтверждают многочисленные региональные и всероссийские награды в сфере интернет-маркетинга. Но главная награда для меня как для директора – наша сильная и инициативная команда. С профессионалами «Алькона» интересно работать в условиях кризиса, решая нестандартные задачи, постоянно совершенствуя рабочие процессы.
+                                    
+                                        .social-network
+                                            a.social-network__item.email(href="mailto:dand@it-alkon.ru") dand@it-alkon.ru
+                        
+                    //- Новиков Артем
+                    .swiper-slide.team__item
+                        .layer.layer-front
+                            .background(style="background-image: url(../images/compress/team/compress-progressive/novikov@progressive.jpg)") 
+
+                        .layer.layer-back
+                            .wrapper
+                                .custom-scrollbar
+                                    span.name.h3 Артем Новиков
+                                    span.appointment Руководитель отдела интернет-маркетинга
+                                    
+                                    .text
+                                        p «Сделать всё по красоте»? Запросто! Так, чтобы было удобно юзерам? Обязательно! Повысить продажи за счет «продающего красного»? С этим ко мне. Двигать пиксели и растрировать — мои главные задачи в «Альконе».
+                                        p Если серьезно, то круг моих обязанностей не ограничивается только тем, чтобы «сделать всё красиво». Представить информацию в доступном виде средствами дизайна — вот первостепенная задача, которую я решаю каждый раз, когда сажусь за работу.
+                                        p Поддерживать рабочий настрой и постоянно развивать свои навыки мне помогает дружественная атмосфера в коллективе, объединенном одними целями. Я рад тому, что однажды пришел в «Алькон» и надеюсь на долгую и красивую историю.
+                                        
+                                        .social-network
+                                            a.social-network__item.email(href="mailto:seo@it-alkon.ru") seo@it-alkon.ru
+                                            a.social-network__item(href="https://www.instagram.com/artem_novikov74/", rel="nofollow", target="_blank") instagram
+                                            a.social-network__item(href="https://vk.com/id7758026", rel="nofollow", target="_blank") vk.com
+
+                    //- Тазетдинов Тимур
+                    .swiper-slide.team__item
+                        .layer.layer-front
+                            .background(style="background-image: url(../images/compress/team/compress-progressive/tazetdinov@progressive.jpg)")
+
+                        .layer.layer-back
+                            .wrapper
+                                .custom-scrollbar
+                                    span.name.h3 Тимур Тазетдинов
+                                    span.appointment Амбассадор, в г. Санкт-Петербурге
+                                    
+                                    .text
+                                        p Технологии развиваются так быстро, что обычному человеку за ними очень сложно уследить. Быть вашим проводником в это удивительное будущее — вот в чем состоит моя миссия. Показать, как использовать сегодняшние инструменты для привлечения клиентов в свой бизнес. Не бояться, а приручать технологии себе на пользу.
+                                    
+                                        .social-network
+                                            a.social-network__item.email(href="mailto:tazetdinov@it-alkon.ru") tazetdinov@it-alkon.ru
+
+                .swiper-pagination
+
+block append scripts
+    script(src="../libs/fullpage/scrolloverflow.min.js")
+    script(src="../libs/jQuery-Scrollbar/jquery.custom-scrollbar.min.js")
+    script(src="../libs/swiper/js/swiper.min.js")
+    script.
+        var swiperTeam = new Swiper('.swiper-container', {
+            resistanceRatio: 0, 
+            slidesPerView: 3, 
+            spaceBetween: 0, 
+            speed: 700, 
+            loop: false,
+            freeMode: true, 
+            mousewheel: {
+                invert: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+                dynamicBullets: false
+            },
+            breakpoints: {
+                1023: {
+                    slidesPerView: 1,
+                },
+                1280: {
+                    slidesPerView: 2,
+                }
+            },
+            on: {
+                slideChange: function() {
+                    swiperTeam.slides[swiperTeam.previousIndex].classList.remove("active");
+                }
+            }
+        });
+
+        if (device.desktop()) {
+            $(".custom-scrollbar").customScrollbar({
+                hScroll: false,
+                updateOnWindowResize: true,
+                wheelSpeed: 30,
+                preventDefaultScroll: true,
+                onCustomScroll: function(event, scrollData) {
+                    //- Отключить скролл слайдера мышью, если работает скролбар у текста
+                    swiperTeam.mousewheel.disable();
+                    
+                    if (scrollData.scrollPercent == 0 || scrollData.scrollPercent == 100) {
+                        //- Задержка 200мс, чтобы не пересекались скролл слайдера и текста
+                        setTimeout(function() {
+                            swiperTeam.mousewheel.enable();
+                        }, 200);
+                    }
+                }
+            });
+        } else {
+            //- Отключить скролл на всей странице
+            scrollLock.disablePageScroll();
+            scrollLock.addScrollableSelector(".custom-scrollbar");
+
+            for (let i = 0; i < swiperTeam.slides.length; i++) {
+                swiperTeam.slides[i].onclick = function() {
+                    if (swiperTeam.slides[i].classList.contains("active")) {
+                        swiperTeam.slides[i].classList.remove("active");
+                    } else {
+                        swiperTeam.slides[i].classList.add("active");
+                    }
+                };
+            }
+        }
+
+        //- Отключить скролл слайдера при наведении на скролл текста
+        $(".custom-scrollbar").on("mouseenter", function() {
+            if ( $(".scroll-bar", this).css("display") == "block" ) {
+                swiperTeam.mousewheel.disable();
+            }
+        });
+
+        //- Включить скролл слайдера при покидании скролла текста
+        $(".custom-scrollbar").on("mouseleave", function() {
+            swiperTeam.mousewheel.enable();
+        });

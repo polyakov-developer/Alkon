@@ -1,0 +1,337 @@
+@import "../utils/vars";
+
+.header {
+    align-items: center;
+    display: flex;
+    left: 0;
+    padding: 37px 50px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .logo {
+        border: none; 
+        z-index: 9001;
+
+        img {
+            width: 75px;
+        }
+    }
+
+    .burger {
+        border: none;
+        cursor: pointer;
+        height: 20px;
+        margin-left: auto;
+        overflow: hidden;
+        position: relative;
+        // width: 30px;
+        width: 26px;
+        z-index: 9001;
+
+        &-line {
+            display: block;
+            float: right;
+            height: 2px;
+            // margin-bottom: 7px;
+            margin-bottom: 6px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+
+            &--inner {
+                background-color: #fff;
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+
+                &:nth-child(2) {
+                    transform: translateX(15px);
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+                width: 70%;
+            }
+        }
+
+        &--active {
+            .burger-line {
+                &:nth-child(1) {
+                    animation: active-burger__first-line .5s forwards;
+                }
+
+                &:nth-child(2) {
+                    animation: active-burger__second-line .5s forwards;
+                }
+
+                &:nth-child(3) {
+                    animation: active-burger__third-line .5s forwards;
+                }
+            }
+        }
+
+        &--unactive {
+            .burger-line{ 
+                &:nth-child(1) {
+                    animation: unactive-burger__first-line .5s forwards;
+                }
+
+                &:nth-child(2) {
+                    animation: unactive-burger__second-line .5s forwards;
+                }
+
+                &:nth-child(3) {
+                    animation: unactive-burger__third-line .5s forwards;
+                }
+            }
+        }
+
+        &:hover {
+            .burger-line {
+                &--inner {
+                    &:nth-child(1) {
+                        animation: hover_burger_a .4s;
+                    }
+
+                    &:nth-child(2) {
+                        animation: hover_burger_b .4s;
+                    }
+                }
+
+                &:nth-child(1) {
+                    .burger-line--inner {
+                        animation-delay: .1s;
+                    }
+                }
+
+                &:nth-child(2) {
+                    .burger-line--inner {
+                        animation-delay: .2s;
+                    }
+                }
+
+                &:nth-child(3) {
+                    .burger-line--inner {
+                        animation-delay: .3s;
+                    }
+                }
+            }
+        }
+
+        &::after {
+            clear: both;
+            content: "";
+            display: block;
+            height: 0;
+            position: relative;
+        }
+    }
+
+    .navigation {
+        background-color: $primaryColor;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        left: 0;
+        overflow: hidden;
+        pointer-events: none;
+        position: fixed;
+        opacity: 0;
+        right: 0;
+        top: 0;
+        transition: opacity .5s ease-in-out;
+        width: 100%;
+        z-index: 9000;
+
+        ul {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            li {
+                display: inline;
+                padding: 0;
+
+                a {
+                    border: none;
+                    color: $defaultColor;
+                    display: block;
+                    font-family: "BrutalType-Light";
+                    line-height: 1;
+                    margin: 0 2rem;
+                    transition: color .25s ease-in-out, opacity .25s ease-in-out;
+
+                    &.active,
+                    &:focus,
+                    &:hover {
+                        color: $yellow !important;
+                        opacity: 1 !important;
+                        transition: color .25s ease-in-out, opacity .25s ease-in-out;
+                    }
+                }
+
+                &::before {
+                    content: initial;
+                }
+
+                &:first-of-type {
+                    a {
+                        margin-left: 0;
+                    }
+                }
+
+                &:last-of-type {
+                    a {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &.top-level {
+                display: inline-flex;
+                margin-left: auto;
+                margin-right: auto;
+
+                li {
+                    a {
+                        font-size: 70px;
+                    }
+                }
+            }
+
+            &.bottom-level {
+                display: inline-flex;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 70px;
+
+                li {
+                    a {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        &--visible {
+            opacity: 1;
+            pointer-events: all;
+            transition: opacity .5s ease-in-out;
+        }
+    }
+}
+
+@keyframes hover_burger_a { 
+    from{ 
+        left: 0; 
+    } 
+    to{ 
+        left: -40px; 
+    } 
+} 
+
+@keyframes hover_burger_b { 
+    from{ 
+        left: 25px; 
+    } 
+    to{ 
+        left: -15px; 
+    } 
+} 
+
+@keyframes active-burger__first-line{ 
+    0%{ 
+        top: 0px; 
+        transform: rotate(0); 
+    } 
+    70%{ 
+        top: 9px; 
+        transform: rotate(0); 
+    } 
+    100%{ 
+        transform: rotate(45deg); 
+        top: 9px; 
+    } 
+} 
+
+@keyframes active-burger__second-line{ 
+    0%{ 
+        opacity: 1; 
+    } 
+    70%{ 
+        opacity: 1; 
+    } 
+    100%{ 
+        opacity: 0; 
+    } 
+} 
+
+@keyframes active-burger__third-line{ 
+    0%{ 
+        bottom: 0px; 
+        transform: rotate(0);
+        width: 70%; 
+    } 
+    70%{ 
+        bottom: 7px; 
+        transform: rotate(0); 
+        width: 70%; 
+    } 
+    100%{ 
+        bottom: 7px; 
+        transform: rotate(-45deg); 
+        width: 100%; 
+    } 
+} 
+
+@keyframes unactive-burger__first-line{ 
+    0%{ 
+        transform: rotate(45deg); 
+        top: 9px; 
+    } 
+    70%{ 
+        top: 9px; 
+        transform: rotate(0); 
+    } 
+    100%{ 
+        top: 0px; 
+        transform: rotate(0); 
+    } 
+} 
+
+@keyframes unactive-burger__second-line{ 
+    0%{ 
+        opacity: 0; 
+    } 
+    70%{ 
+        opacity: 0; 
+    } 
+    100%{ 
+        opacity: 1; 
+    } 
+} 
+
+@keyframes unactive-burger__third-line{ 
+    0%{ 
+        bottom: 7px; 
+        transform: rotate(-45deg); 
+        width: 100%; 
+    } 
+    70%{ 
+        bottom: 7px; 
+        transform: rotate(0); 
+        width: 70%; 
+    } 
+    100%{ 
+        bottom: 0px; 
+        transform: rotate(0); 
+        width: 70%; 
+    } 
+}

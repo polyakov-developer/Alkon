@@ -1,0 +1,444 @@
+@import "../utils/vars.scss";
+@import "../utils/mixin.scss";
+
+.services {
+    padding-bottom: 64px;
+    
+    &-header {
+        background-color: $mainBackgroundColor;
+        padding-bottom: 118px;
+        padding-top: 250px;
+
+        .section-heading {
+            @include font-size(28px, 60px, 320px, 1200px);
+            line-height: normal;
+        }
+        
+        .section-description {
+            color: $neutralPrimary;
+            margin: 40px 0 0 0;
+        }
+    }
+
+    &-content {
+        .services__item {
+            background-color: transparent;
+            transition: background-color .25s ease-in-out;
+
+            &-content {
+                border-bottom: 2px solid $borderDarker;
+                display: flex;
+                padding-bottom: 50px;
+                padding-top: 50px;
+                position: relative;
+                transition: border-color .25s ease-in-out;
+
+                .heading {
+                    font-family: "BrutalType-Light";
+                    letter-spacing: 0.03em;
+                    line-height: 1;
+                    margin: auto 0;
+                    text-transform: uppercase;
+                    transition: color .25s ease-in-out;
+                    width: 30%;
+                }
+    
+                .anons {
+                    color: $neutralPrimary;
+                    margin: 0;
+                    transition: color .25s ease-in-out;
+                    width: 50%;
+                }
+    
+                .more {
+                    opacity: 0;
+                    margin-left: auto;
+                    pointer-events: none;
+                    transition: opacity .25s ease-in-out;
+    
+                    .button {
+                        border-color: $primaryColor;
+                        color: $primaryColor;
+    
+                        &:hover {
+                            border-color: $yellow;
+                        }
+                    }
+
+                    @media all and (hover: none) {
+                        pointer-events: all;
+                        opacity: 1;
+
+                        .button {
+                            border-color: $defaultColor;
+                            color: $defaultColor;
+
+                            &:hover {
+                                border-color: $yellow;
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @media not all and (hover: none) {
+                &:hover {
+                    background-color: #E5E5E5;
+    
+                    .services__item-content {
+                        border-color: transparent;
+                        transition: border-color .25s ease-in-out;
+    
+                        .heading,
+                        .anons {
+                            color: $primaryColor;
+                        }
+    
+                        .more {
+                            opacity: 1;
+                            pointer-events: all;
+                            transition: opacity .25s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.services--inner {
+    .hero-slide {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+
+        .container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+        }
+
+        .category {
+            color: $neutralRegular;
+            font-size: 14px;
+            font-family: "PTRootUI-Bold";
+            margin: 0;
+            letter-spacing: 0.03em;
+            line-height: 15px;
+            text-transform: uppercase;
+        }
+
+        .section-heading {
+            @include font-size(28px, 60px, 320px, 1200px);
+            line-height: normal;
+            margin: 25px 0 0 0;
+            text-align: center;
+        }
+
+        .section-description {
+            color: $neutralPrimaryLighter;
+            margin: 30px 0 0 0;
+            text-align: center;
+        }
+
+        .button-wrapper {
+            margin: 80px 0 0 0;
+        }
+
+        .control-buttons {
+            bottom: 40px;
+            position: absolute;
+            right: 50px;
+
+            .button {
+                background-image: url("../images/icons/arrow-left.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 24px;
+                border: 1px solid $borderLighter;
+                cursor: pointer;
+                height: 40px;
+                display: block;
+                margin-bottom: 10px;
+                width: 40px;
+
+                &.button-down {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+
+        &::before {
+            background-color: rgba($color: $primaryColor, $alpha: 0.8);
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    .content {
+        .list-of-works {
+            &__items-wrapper {
+                .row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -15px;
+                }
+        
+                .list-of-works__item {
+                    margin-top: 60px;
+                    padding: 0 15px;
+                    width: 25%;
+        
+                    .title {
+                        line-height: 28px;
+                        margin: 18px 0 0 0;
+                    }
+
+                    &:nth-of-type(3n) {
+                        margin-right: 25%;
+                    }
+                }
+            }
+        }
+
+        .cases {
+            &-wrapper {
+                margin-left: -7.5px;
+                margin-right: -7.5px;
+                margin-top: 60px;
+                display: flex;
+
+                .case__item {
+                    flex: 1;
+                    height: 600px;
+                    margin-left: 7.5px;
+                    margin-right: 7.5px;
+                    position: relative;
+
+                    .background {
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 100%;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+    
+                        &::after {
+                            background-color: rgba($color: #000000, $alpha: 0.4);
+                            content: "";
+                            height: 100%;
+                            left: 0;
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                        }
+                    }
+
+                    .popup-youtube {
+                        background-image: url(../images/icons/play-video.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border: none;
+                        bottom: 0;
+                        display: block;
+                        height: 100px;
+                        margin: auto;
+                        left: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 100px;
+                    }
+                    
+                    .title {
+                        @include font-size(20px, 30px, 320px, 1200px);
+                        bottom: 40px;
+                        color: $defaultColor;
+                        cursor: default;
+                        font-family: "BrutalType-Light";
+                        left: 40px;
+                        line-height: 1;
+                        user-select: none;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+
+        .tariff {
+            padding-bottom: 100px;
+            padding-top: 100px;
+            
+            &-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -7.5px;
+
+                .tariff__item {
+                    background-color: $primaryBackgroundColor;
+                    display: flex;
+                    flex-direction: column;
+                    height: 290px;
+                    margin-bottom: 15px;
+                    margin-left: 7.5px;
+                    margin-right: 7.5px;
+                    padding: 30px 30px 40px 30px;
+                    width: calc(33.3333% - 15px);
+
+                    .title {
+                        @include font-size(18px, 24px, 320px, 1200px);
+                        color: $defaultColor;
+                        font-family: "BrutalType-Light";
+                    }
+
+                    .price {
+                        color: $defaultColor;
+                        font-family: "BrutalType-Light";
+                        margin-top: auto;
+
+                        .caption {
+                            font-size: 15px;
+                        }
+
+                        .value {
+                            font-size: 20px;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
+
+                        .currency {
+                            font-family: "PTRootUI-Regular";
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .call-back-block {
+                align-items: center;
+                background-color: $lightBackgrounColor;
+                display: flex;
+                justify-content: center;
+                padding: 50px 0;
+
+                .text {
+                    @include font-size(18px, 24px, 320px, 1200px);
+                    color: $defaultColor;
+                    font-family: "BrutalType-Light";
+                    margin: 0;
+                    padding: 0 40px;
+                }
+
+                .telephone {
+                    @include font-size(28px, 48px, 320px, 1200px);
+                    border: none;
+                    color: $defaultColor;
+                    font-family: "BrutalType-Light";
+                    padding: 0 40px;
+                }
+            }
+        }
+
+        .seo-text {
+            &-wrapper {
+                background-color: $primaryBackgroundColor;
+                display: flex;
+                justify-content: space-between;
+                padding: 50px;
+
+                .col-left {
+                    width: 33.3333%;
+
+                    .section-heading {
+                        line-height: 1.2;
+                        margin: 20px 0 0 0;
+                    }
+
+                    .button-wrapper {
+                        margin-top: 55px;
+                    }
+                }
+
+                .col-right {
+                    width: 60%;
+
+                    .text {
+                        height: 312px;
+                        overflow: auto;
+                        padding-right: 30px;
+
+                        h2, .h2,
+                        h3, .h3,
+                        h4, .h4,
+                        h5, .h5,
+                        h6, .h6 {
+                            color: $neutralDarker;
+                        }
+
+                        h2, .h2 {
+                            @include font-size(15px, 18px, 320px, 1200px);
+                        }
+
+                        h3, .h3 {
+                            @include font-size(14px, 17px, 320px, 1200px);
+                        }
+
+                        h4, .h4 {
+                            @include font-size(14px, 16px, 320px, 1200px);
+                        }
+
+                        h5, .h5,
+                        h6, .h6 {
+                            @include font-size(13px, 14px, 320px, 1200px);
+                        }
+
+                        ol {
+                            padding-left: 1em;
+                        }
+
+                        & > * {
+                            color: $neutralDarker;
+                            font-size: 13px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .services-navigation {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 100px;
+
+            .services-navigation__item {
+                @include font-size(18px, 24px, 320px, 1200px);
+                border: none;
+                color: $neutralPrimary;
+                font-family: "BrutalType-Light";
+                line-height: 1;
+                letter-spacing: 0.03em;
+                text-align: center;
+                text-transform: uppercase;
+                transition: all .25s ease-in-out;
+
+                &:hover {
+                    color: $defaultColor;
+                    transition: all .25s ease-in-out;
+                }
+            }
+        }
+    }
+}
